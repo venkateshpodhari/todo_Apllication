@@ -1,16 +1,20 @@
-GET http://localhost:3000/todos/?status=TO%20DO
+GET http://localhost:3001/todos/?status=TO%20DO
 
 ###
-GET http://localhost:3000/todos/?priority=HIGH
+GET http://localhost:3001/todos/?priority=HIGH
 
 ###
-GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+GET http://localhost:3001/todos/?priority=HIGH&status=IN%20PROGRESS
+
 ###
-GET http://localhost:3000/todos/?search_q=Express
+GET http://localhost:3001/todos/?search_q=event
 ###
-GET http://localhost:3000/todos/2/
+
+GET http://localhost:3001/todos/2/
+
 ###
-POST http://localhost:3000/todos/
+
+POST http://localhost:3001/todos/
 Content-Type: application/json
 
 {
@@ -20,7 +24,28 @@ Content-Type: application/json
   "status": "TO DO"
 }
 ###
-PUT http://localhost:3000/todos/1/?status=DONE&priority=HIGH&todo=Some%20task
+PUT http://localhost:3001/todos/3/
+Content-Type: application/json
+
+{
+    "status": "TO DO"
+}
+###
+PUT http://localhost:3001/todos/2/
+Content-Type: application/json
+
+{
+    "priority": "HIGHS"
+}
 
 ###
-DELETE http://localhost:3000/todos/4/
+PUT http://localhost:3001/todos/2/
+Content-Type: application/json
+
+{
+    "todo": "Some task"
+}
+
+
+###
+DELETE http://localhost:3001/todos/10/
